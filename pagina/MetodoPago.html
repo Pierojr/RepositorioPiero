@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pago - Krusty Burger</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            background-color: #ff6b01;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        nav li {
+            margin-right: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            padding: 10px 20px;
+        }
+        nav a:hover {
+            color: #fff;
+            background-color: #ff9239;
+            border-radius: 4px;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        input[type="text"], input[type="number"], input[type="email"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #ff6b01;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #ff9239;
+        }
+        h2 {
+            text-align: center;
+            color: #ff6b01;
+        }
+        label {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="InicioSesion.html">Inicio Sesión</a></li>
+            <li><a href="registro.html">Registro</a></li>
+            <li><a href="index.html">index</a></li>
+            <li><a href="Carrito.html">Carrito</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
+            <li><a href="PaginaPrincipal.html">Pagina Principal</a></li>
+            <li><a href="Menus.html">Menus</a></li>
+            <li><a href="MetodoPago.html">Metodo Pago</a></li> 
+        </ul>
+    </nav>
+
+    <form action="procesar_pago.php" method="post">
+        <h2>Formulario de Pago - Krusty Burger</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required>
+        
+        <label for="tarjeta">Número de Tarjeta:</label>
+        <input type="text" id="tarjeta" name="tarjeta" required>
+        
+        <label for="caducidad">Fecha de Caducidad:</label>
+        <input type="text" id="caducidad" name="caducidad" placeholder="MM/AA" required>
+        
+        <label for="cvv">CVV:</label>
+        <input type="number" id="cvv" name="cvv" required>
+        
+        <label for="monto">Monto a Pagar:</label>
+        <input type="number" id="monto" name="monto" required>
+        
+        <input type="submit" value="Pagar">
+    </form>
+</body>
+</html>
+
+
+
+
